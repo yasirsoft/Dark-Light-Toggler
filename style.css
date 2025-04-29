@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .toggler {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+  }
+  
+  .toggler .icon {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .toggler.animate .icon {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  
+  body.dark-mode .toggler {
+    color: gold;
+  }
+  
+  body:not(.dark-mode) .toggler {
+    color: orange;
+  }
+  
+  /* Animation image styles */
+  .animation {
+    display: none;
+    margin-top: 30px;
+  }
+  
+  .animation img {
+    max: width 100px;
+    height: auto;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
